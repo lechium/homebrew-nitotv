@@ -15,7 +15,7 @@ class Ncp < Formula
     system ENV.cc,  "-o", "build/ncp", "ncp/main.m", "ncp/NSFileManager+Size.m", "ncp/KBProgress.m", "ncp/RSTLCopyOperation.m",
                     "-Incp", "-I.", "-framework", "Foundation", "-include", "ncp/ncp-Prefix.pch"
     bin.install "build/ncp"
-    system "cp ncp.1.gz /usr/local/share/man/man1/"
+    system "cp", "ncp.1.gz", "/usr/local/share/man/man1/"
   end
 
   test do
