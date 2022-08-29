@@ -13,7 +13,7 @@ class Ncp < Formula
     value = `#{cmd}`
     print value
     system ENV.cc,  "-o", "build/ncp", "ncp/main.m", "ncp/NSFileManager+Size.m", "ncp/KBProgress.m", "ncp/RSTLCopyOperation.m",
-                    "-Incp"
+                    "-Incp", "-I.", "-framework", "Foundation", "-include", "ncp/ncp-Prefix.pch"
     bin.install "build/ncp"
   end
 
