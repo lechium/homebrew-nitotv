@@ -12,7 +12,7 @@ class Ncp < Formula
     cmd = "mkdir build"
     value = `#{cmd}`
     print value
-    system ENV.cc,  "-o", "build/ncp", "ncp/main.m", "ncp/NSFileManager+Size.m", "ncp/KBProgress.m", "ncp/RSTLCopyOperation.m"
+    system ENV.cc,  "-o", "build/ncp", "ncp/main.m", "ncp/NSFileManager+Size.m", "ncp/KBProgress.m", "ncp/RSTLCopyOperation.m",
                     "-Incp"
     bin.install "build/ncp"
   end
